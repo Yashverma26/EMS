@@ -293,67 +293,16 @@ nav svg {
   }
 }
 
-footer {
-  padding: 50px 20px;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  color: #fff;
-}
-footer .banner {
-  max-width: 750px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-footer .banner .title {
+.site-footer {
+  padding: 18px 20px;
+  background: #070707;
+  color: #f8f4eb;
   text-align: center;
 }
-footer .banner .title h1 {
-  font-size: 40px;
-  font-family: "Cormorant Garamond", serif;
-  letter-spacing: 3px;
-  font-weight: 400;
-}
-footer .banner .title p {
-  color: #a2783a;
-  font-family: "Alex Brush", cursive;
-  font-size: 24px;
-}
-footer .banner .tag {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin: 20px 0;
-}
-footer .banner .tag div {
-  display: flex;
-  gap: 5px;
-}
-footer .banner .tag div input {
-  flex: 1;
-  border-radius: 8px;
-  padding: 6px;
-  background: transparent;
-  border: 1px solid #fff7ea;
-}
-footer .banner .tag div input:focus {
-  outline: none;
-}
-footer .banner .tag p {
-  text-align: center;
-}
-footer .banner .tag div button {
-  background: #fff7ea;
-  border: 1px solid #fff7ea;
-  padding: 7px 15px;
-  border-radius: 8px;
-}
-@media (max-width: 500px) {
-  footer .banner .tag div {
-    flex-direction: column;
-    gap: 12px;
-  }
+.site-footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #c9c1b7;
 }
 .about {
   padding-top: 75px;

@@ -8,10 +8,16 @@ const app = express();
 
 dotenv.config({ path: "./config/config.env" });
 
+const allowedOrigins = [process.env.FRONTEND_URL];
+
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],
-    methods: ["POST"],
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) return callback(null, true);
+      return callback(new Error("CORS policy: Origin not allowed"));
+    },
+    methods: ["GET", "POST", "OPTIONS"],
     credentials: true,
   })
 );
