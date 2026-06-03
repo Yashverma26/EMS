@@ -13,7 +13,7 @@ const Contact = () => {
     e.preventDefault();
     await axios
       .post(
-        `${API_URL}/api/v1/message/send`,
+        `https://ems-6opb.onrender.com/api/v1/message/send`,
         {
           name,
           email,
