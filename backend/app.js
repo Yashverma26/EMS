@@ -8,7 +8,10 @@ const app = express();
 
 dotenv.config({ path: "./config/config.env" });
 
-const allowedOrigins = [process.env.FRONTEND_URL];
+const allowedOrigins = String(process.env.FRONTEND_URL || "")
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
 
 app.use(
   cors({
